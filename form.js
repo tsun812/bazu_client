@@ -2,7 +2,8 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, TextInput, Button } from "react-native";
 import { Box, Input } from "native-base";
 import React from "react";
-import Error from "./error"
+import Error from "./error";
+import Promo from "./promo";
 export default function Form() {
   const [promo, setPromo] = React.useState("");
   const handleClick = () => {};
@@ -26,7 +27,8 @@ export default function Form() {
         }
         placeholder="Enter your promo here"
       />
-      <Error/>
+      <Promo />
+      <Error />
     </Box>
   );
 }
