@@ -32,7 +32,7 @@ export default function Form(props) {
         placeholder="Enter your promo here"
       />
       {props.promo !== null && <Promo promo={props.promo} />}
-      <Error />
+      {props.error && <Error />}
     </Box>
   );
 }

@@ -12,6 +12,8 @@ export default function App() {
     id,
     mode,
     promo,
+    error,
+    setError,
     setId,
     setMode,
     setPromo,
@@ -32,6 +34,8 @@ export default function App() {
             setMode={setMode}
             updatePromo={updatePromo}
             deletePromo={deletePromo}
+            error={error}
+            setError={setError}
           />
         )}
       </Box>
