@@ -7,7 +7,11 @@ export default function Promo(props) {
     props.setMode("promo");
     if (e.target.value === "Sally") {
       props.setId("3");
-    } else props.setId("4");
+      props.fetch("3");
+    } else {
+      props.setId("4");
+      props.fetch("4");
+    }
   };
   return (
     <Box alignItems="center">

@@ -7,7 +7,7 @@ export default function Promo(props) {
     props.setMode("user");
   };
   return (
-    <Box alignItems="start">
+    <Box alignItems="center">
       <Button size="sm" onPress={handlePress}>
         Logout
       </Button>

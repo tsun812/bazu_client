@@ -7,23 +7,31 @@ export default function useApplicationData() {
   const [promo, setPromo] = useState(null);
 
   const fetchAPI = () => {
-    Promise.all([axios.get(`/users/{id}`)]).then((all) => {
-      setMode(all[0]["data"].promo);
-    });
+    Promise.all([axios.get(`/users/{id}`)])
+      .then((all) => {
+        setMode(all[0]["data"].promo);
+      })
+      .catch((error) => console.log(error));
   };
   const updatePromo = (id, newPromo) => {
     let params = {
       promo: newPromo,
     };
-    axios.put(`/users/${id}`, params).then((all) => {
-      setPromo(newPromo);
-    });
+    axios
+      .put(`/users/${id}`, params)
+      .then((all) => {
+        setPromo(newPromo);
+      })
+      .catch((error) => console.log(error));
   };
 
   const deletePromo = (id) => {
-    axios.put(`/users/${id}`, null).then((all) => {
-      setPromo(null);
-    });
+    axios
+      .put(`/users/${id}`, null)
+      .then((all) => {
+        setPromo(null);
+      })
+      .catch((error) => console.log(error));
   };
 
   return {

@@ -4,10 +4,15 @@ import { Box, Input } from "native-base";
 import React from "react";
 import Error from "./Error";
 import Promo from "./Promo";
+import Logout from "./Logout";
 export default function Form(props) {
-  const handleClick = () => {};
+  const handleClick = () => {
+    if (props.promo === null) {
+    }
+  };
   return (
     <Box alignItems="center">
+      <Logout setMode={props.setMode} />
       <Text>Promo Code</Text>
       <Input
         type="text"
@@ -26,7 +31,7 @@ export default function Form(props) {
         }
         placeholder="Enter your promo here"
       />
-      <Promo />
+      {props.promo !== null && <Promo promo={props.promo} />}
       <Error />
     </Box>
   );
