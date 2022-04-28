@@ -6,7 +6,7 @@ export default function App() {
   // 2. Use at the root of your app
   return (
     <NativeBaseProvider>
-      <Box flex={1} bg="#FFA500" alignItems="center" justifyContent="center">
+      <Box flex={1} bg="#FFFFFF" alignItems="center" justifyContent="center">
         <Text>Bazu</Text>
         <Form />
       </Box>

@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, TextInput, Button } from "react-native";
 import { Box, Input } from "native-base";
 import React from "react";
+import Error from "./error"
 export default function Form() {
   const [promo, setPromo] = React.useState("");
   const handleClick = () => {};
@@ -9,10 +10,10 @@ export default function Form() {
     <Box alignItems="center">
       <Text>Promo Code</Text>
       <Input
-        mx="3"
-        placeholder="Enter promo code here"
+        type="text"
         w="75%"
-        maxWidth="300px"
+        maxW="300px"
+        py="0"
         InputRightElement={
           <Button
             size="xs"
@@ -20,26 +21,12 @@ export default function Form() {
             w="1/6"
             h="full"
             onPress={handleClick}
-            title="Add"
+            title="add"
           ></Button>
         }
+        placeholder="Enter your promo here"
       />
+      <Error/>
     </Box>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#FFA500",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  input: {
-    height: 40,
-    width: 100,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
-  },
-});
