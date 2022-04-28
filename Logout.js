@@ -4,18 +4,12 @@ import { Button, Box } from "native-base";
 import React from "react";
 export default function Promo(props) {
   const handlePress = (e) => {
-    props.setMode("promo");
-    if (e.target.value === "Sally") {
-      props.setId("3");
-    } else props.setId("4");
+    props.setMode("user");
   };
   return (
-    <Box alignItems="center">
+    <Box alignItems="start">
       <Button size="sm" onPress={handlePress}>
-        Sally
-      </Button>
-      <Button size="sm" onPress={handlePress}>
-        Bob
+        Logout
       </Button>
     </Box>
   );
