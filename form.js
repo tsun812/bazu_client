@@ -4,8 +4,7 @@ import { Box, Input } from "native-base";
 import React from "react";
 import Error from "./Error";
 import Promo from "./Promo";
-export default function Form() {
-  const [promo, setPromo] = React.useState("");
+export default function Form(props) {
   const handleClick = () => {};
   return (
     <Box alignItems="center">

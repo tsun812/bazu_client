@@ -11,9 +11,10 @@ export default function useApplicationData() {
       setMode(all[0]["data"].promo);
     });
   };
-
   const updatePromo = (id, newPromo) => {
-    let params = newPromo;
+    let params = {
+      promo: newPromo,
+    };
     axios.put(`/users/${id}`, params).then((all) => {
       setPromo(newPromo);
     });
