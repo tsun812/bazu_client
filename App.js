@@ -17,6 +17,7 @@ export default function App() {
     setId,
     setMode,
     setPromo,
+    cleanup,
     fetchAPI,
     updatePromo,
     deletePromo,
@@ -36,6 +37,7 @@ export default function App() {
             deletePromo={deletePromo}
             error={error}
             setError={setError}
+            cleanup={cleanup}
           />
         )}
       </Box>

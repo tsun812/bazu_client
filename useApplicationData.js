@@ -6,12 +6,20 @@ export default function useApplicationData() {
   const [mode, setMode] = useState("user");
   const [promo, setPromo] = useState(null);
   const [error, setError] = useState(false);
-
-  const fetchAPI = () => {
-    Promise.all([axios.get(`/users/{id}`)])
-      .then((all) => {
-        console.log(all[0]["data"].promo);
-        setMode(all[0]["data"].promo);
+  const cleanup = () => {
+    setError(false);
+    setPromo(null);
+    setId("");
+    setMode("user");
+  };
+  const fetchAPI = (id) => {
+    console.log(id);
+    axios
+      .get(`http://192.168.0.100:3000/users/${id}`)
+      .then((res, err) => {
+        console.log(res.data.promo);
+        setPromo(res["data"]["promo"]);
+        setMode("promo");
       })
       .catch((error) => console.log(error));
   };
@@ -48,5 +56,6 @@ export default function useApplicationData() {
     updatePromo,
     deletePromo,
     setError,
+    cleanup,
   };
 }

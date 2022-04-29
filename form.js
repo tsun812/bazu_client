@@ -8,11 +8,11 @@ import Logout from "./Logout";
 export default function Form(props) {
   const handleClick = () => {
     if (props.promo === null) {
-    }
+    } else console.log(props.promo);
   };
   return (
     <Box alignItems="center">
-      <Logout setMode={props.setMode} />
+      <Logout setMode={props.setMode} cleanup={props.cleanup} />
       <Text>Promo Code</Text>
       <Input
         type="text"
@@ -31,7 +31,7 @@ export default function Form(props) {
         }
         placeholder="Enter your promo here"
       />
-      {props.promo !== null && <Promo promo={props.promo} />}
+      {props.promo && <Promo promo={props.promo} />}
       {props.error && <Error />}
     </Box>
   );

@@ -4,7 +4,7 @@ import { Button, Box } from "native-base";
 import React from "react";
 export default function Promo(props) {
   const handlePress = (e) => {
-    props.setMode("user");
+    props.cleanup();
   };
   return (
     <Box alignItems="center">
