@@ -31,7 +31,13 @@ export default function Form(props) {
         }
         placeholder="Enter your promo here"
       />
-      {props.promo && <Promo promo={props.promo} />}
+      {props.promo && (
+        <Promo
+          id={props.id}
+          promo={props.promo}
+          deletePromo={props.deletePromo}
+        />
+      )}
       {props.error && <Error />}
     </Box>
   );

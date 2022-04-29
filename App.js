@@ -31,6 +31,7 @@ export default function App() {
         )}
         {mode === "promo" && (
           <Form
+            id={id}
             promo={promo}
             setMode={setMode}
             updatePromo={updatePromo}
