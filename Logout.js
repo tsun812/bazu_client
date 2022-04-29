@@ -8,7 +8,14 @@ export default function Promo(props) {
   };
   return (
     <Box alignItems="center">
-      <Button size="sm" onPress={handlePress}>
+      <Button
+        size="sm"
+        size="sm"
+        variant="subtle"
+        my="10"
+        mx="5"
+        onPress={handlePress}
+      >
         Logout
       </Button>
     </Box>

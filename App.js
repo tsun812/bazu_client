@@ -38,6 +38,7 @@ export default function App() {
             deletePromo={deletePromo}
             error={error}
             setError={setError}
+            setPromo={setPromo}
             cleanup={cleanup}
           />
         )}

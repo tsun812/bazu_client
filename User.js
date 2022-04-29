@@ -14,11 +14,24 @@ export default function Promo(props) {
     }
   };
   return (
-    <Box alignItems="center">
-      <Button size="sm" onPress={(e) => handlePress(e, "Sally")}>
+    <Box>
+      <Button
+        size="sm"
+        variant="subtle"
+        my="10"
+        mx="10"
+        onPress={(e) => handlePress(e, "Sally")}
+      >
         Sally
       </Button>
-      <Button size="sm" onPress={(e) => handlePress(e, "Bob")}>
+      <Button
+        size="sm"
+        variant="subtle"
+        my="10"
+        mx="10"
+        px="10"
+        onPress={(e) => handlePress(e, "Bob")}
+      >
         Bob
       </Button>
     </Box>

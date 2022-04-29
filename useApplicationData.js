@@ -25,10 +25,10 @@ export default function useApplicationData() {
   };
   const updatePromo = (id, newPromo) => {
     let params = {
-      promo: newPromo,
+      newPromo: newPromo,
     };
     axios
-      .put(`/users/${id}`, params)
+      .put(`http://192.168.0.100:3000/users/${id}`, params)
       .then((all) => {
         setPromo(newPromo);
       })
@@ -43,6 +43,7 @@ export default function useApplicationData() {
     axios
       .put(`http://192.168.0.100:3000/users/${id}`, params)
       .then((all) => {
+        setError(false);
         setPromo(null);
       })
       .catch((error) => console.log(error));
