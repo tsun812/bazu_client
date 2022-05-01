@@ -43,8 +43,8 @@ export default function useApplicationData() {
     axios
       .put(`http://192.168.0.100:3000/users/${id}`, params)
       .then((all) => {
-        setError(false);
         setPromo(null);
+        setError(false);
       })
       .catch((error) => console.log(error));
   };
