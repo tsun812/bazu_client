@@ -7,8 +7,8 @@ export default function useApplicationData() {
   const [promo, setPromo] = useState(null);
   const [error, setError] = useState(false);
   const cleanup = () => {
-    setError(false);
     setPromo(null);
+    setError(false);
     setId("");
     setMode("user");
   };
