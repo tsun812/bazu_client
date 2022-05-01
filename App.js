@@ -2,9 +2,9 @@ import React from "react";
 import { useState } from "react";
 
 import { NativeBaseProvider, Text, Box } from "native-base";
-import Form from "./Form";
-import User from "./User";
-import useApplicationData from "./useApplicationData";
+import Form from "./components/Form";
+import User from "./components/User";
+import useApplicationData from "./hooks/useApplicationData";
 export default function App() {
   // 2. Use at the root of your app
   // const [mode, setMode] = useState("user");

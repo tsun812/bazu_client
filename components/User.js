@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, TextInput } from "react-native";
 import { Button, Box } from "native-base";
 import React from "react";
-export default function Promo(props) {
+export default function User(props) {
   const handlePress = (e, title) => {
     console.log(e);
     if (title === "Sally") {

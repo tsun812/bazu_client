@@ -13,7 +13,7 @@ export default function Promo(props) {
         size="sm"
         variant="subtle"
         my="10"
-        mx="5"
+        mx="5 "
         onPress={handlePress}
       >
         Logout
